@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>台南慢旅 2026</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        muji: {
+                            bg: '#f4f4f0', text: '#4a4a4a', sub: '#8e8e8e',
+                            accent: '#7f8c8d', brown: '#8b5a2b', green: '#7c9473', red: '#bf6c6c',
+                            blue: '#6c8ebf', purple: '#9b72aa'
+                        }
+                    },
+                    fontFamily: { sans: ['"Noto Sans TC"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #f4f4f0; color: #4a4a4a; -webkit-tap-highlight-color: transparent; padding-bottom: 80px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .tab-active { color: #8b5a2b; font-weight: bold; }
+        .tab-active i { transform: scale(1.1); transition: transform 0.2s; }
+        input, textarea { border: 1px solid #e5e7eb; border-radius: 6px; padding: 10px; outline: none; transition: border-color 0.2s; }
+        input:focus, textarea:focus { border-color: #8b5a2b; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-muji-brown selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-40 bg-muji-bg/95 backdrop-blur-sm border-b border-stone-200 pt-safe-top">
+        <div class="px-6 py-4 flex justify-between items-center max-w-md mx-auto">
+            <div>
+                <h1 class="text-xl font-bold tracking-widest text-muji-brown">TAINAN</h1>
+                <p class="text-xs text-muji-sub tracking-wider">2026.01.02 - 01.04</p>
+            </div>
+            <div class="text-xs bg-muji-brown text-white px-2 py-1 rounded-sm">帶爸媽慢旅</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20 px-4 max-w-md mx-auto min-h-screen">
+        
+        <!-- SECTION: PLAN -->
+        <div id="view-plan" class="view-section fade-in">
+            <!-- HSR -->
+            <div class="bg-white rounded-lg p-4 shadow-sm mb-4 border-l-4 border-muji-brown">
+                <h3 class="font-bold text-lg mb-2"><i class="fa-solid fa-train-subway mr-2"></i>確定車次</h3>
+                <div class="text-sm text-gray-600 space-y-1">
+                    <p>南下 (1/2): <span class="font-mono font-bold text-muji-text">619車次</span> (11:06 抵達)</p>
+                    <p>北上 (1/4): <span class="font-mono font-bold text-muji-text">546車次</span> (16:28 發車)</p>
+                </div>
+            </div>
+
+            <!-- Day 1 -->
+            <div class="mb-8">
+                <div class="sticky top-16 bg-muji-bg py-2 z-10 flex items-center">
+                    <span class="text-2xl font-bold text-muji-text mr-2">01/02</span>
+                    <span class="text-sm text-white bg-muji-text px-2 py-0.5 rounded-full">週五・貓道與空山祭</span>
+                </div>
+                <div class="space-y-4 mt-2">
+                    <!-- 11:06 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">11:06</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">抵達 & 寄放行李</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=和逸飯店台南西門館" target="_blank" class="text-muji-accent"><i class="fa-solid fa-location-dot"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500">和逸飯店 (司法博物館對面)</p>
+                        </div>
+                    </div>
+                    <!-- 11:40 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">11:40</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">午餐：醇涎坊鍋燒意麵</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=醇涎坊鍋燒意麵" target="_blank" class="text-muji-accent"><i class="fa-solid fa-location-dot"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500">保安路美食 (無牛)。</p>
+                        </div>
+                    </div>
+                    <!-- 13:30 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3 border-l-4 border-muji-green">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">13:30</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">司法博物館 (排貓道)</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=台南司法博物館" target="_blank" class="text-muji-accent"><i class="fa-solid fa-location-dot"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">務必 13:40 去排隊領號碼牌 (15:00場)</p>
+                        </div>
+                    </div>
+                    <!-- 16:00 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3 border-l-4 border-gray-800">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">16:00</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">出發：龍崎空山祭</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=龍崎虎形山公園" target="_blank" class="text-muji-accent"><i class="fa-solid fa-taxi"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1"><strong>建議包車/計程車</strong>。車程約50分。最美山林燈節，需步行爬坡，請穿好走的鞋。</p>
+                            <span class="inline-block mt-2 text-xs bg-gray-800 text-white px-2 py-1 rounded">20:00 返程</span>
+                        </div>
+                    </div>
+                    <!-- 21:00 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">21:00</span></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">市區宵夜</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=喵嫂鹹酥雞" target="_blank" class="text-muji-accent"><i class="fa-solid fa-drumstick-bite"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500">回程順路買喵嫂鹹酥雞，回飯店享用。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="mb-8">
+                <div class="sticky top-16 bg-muji-bg py-2 z-10 flex items-center">
+                    <span class="text-2xl font-bold text-muji-text mr-2">01/03</span>
+                    <span class="text-sm text-white bg-muji-brown px-2 py-0.5 rounded-full">週六・府城踅街</span>
+                </div>
+                <div class="space-y-4 mt-2">
+                    <!-- 09:30 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">09:30</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <h4 class="font-bold">早餐：和逸飯店</h4>
+                            <p class="text-sm text-gray-500">享用飯店自助早餐，補充體力。</p>
+                        </div>
+                    </div>
+                    <!-- 10:30 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">10:30</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <h4 class="font-bold">退房 & 移動</h4>
+                            <a href="https://www.google.com/maps/search/?api=1&query=想起旅宿" target="_blank" class="text-muji-accent"><i class="fa-solid fa-suitcase"></i></a>
+                            <p class="text-sm text-gray-500">搭車去「想起旅宿」寄行李。</p>
+                        </div>
+                    </div>
+                    <!-- 11:15 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3 border-l-4 border-muji-green">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">11:15</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">蝸牛巷 (餐前散策)</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=蝸牛巷" target="_blank" class="text-muji-accent"><i class="fa-solid fa-location-dot"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">從民宿散步去餐廳，途經蝸牛巷拍照。</p>
+                        </div>
+                    </div>
+                    <!-- 11:40 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3 border-l-4 border-muji-red">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">11:40</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">排隊：博仁堂</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=博仁堂" target="_blank" class="text-muji-accent"><i class="fa-solid fa-utensils"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">12:00 開門。<strong>務必 11:45 前抵達</strong>排第一輪入座。</p>
+                        </div>
+                    </div>
+                    <!-- 14:00 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3 border-l-4 border-muji-brown">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">14:00</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">導覽：府城踅街</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=想起旅宿" target="_blank" class="text-muji-accent"><i class="fa-solid fa-flag"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1"><strong>集合地點：想起旅宿前</strong>。五條港深度走讀。</p>
+                            <span class="inline-block mt-2 text-xs bg-muji-brown text-white px-2 py-1 rounded">16:30 結束</span>
+                        </div>
+                    </div>
+                    <!-- 16:30 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">16:30</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <h4 class="font-bold">蜜餞採買 & 休息</h4>
+                            <div class="flex gap-2">
+                                <a href="https://www.google.com/maps/search/?api=1&query=吳萬春蜜餞" target="_blank" class="text-muji-accent"><i class="fa-solid fa-gift"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500">去<strong>吳萬春蜜餞 (武廟旁)</strong> 買伴手禮 (取代安平)。買完回民宿大休息。</p>
+                        </div>
+                    </div>
+                    <!-- 19:00 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">19:00</span></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">神農街 + 晚餐</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=神農街" target="_blank" class="text-muji-accent"><i class="fa-solid fa-location-dot"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500">晚餐推薦：阿江鱔魚意麵 (道地) 或 室町鰻丼 (舒適)。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="mb-20">
+                <div class="sticky top-16 bg-muji-bg py-2 z-10 flex items-center">
+                    <span class="text-2xl font-bold text-muji-text mr-2">01/04</span>
+                    <span class="text-sm text-white bg-muji-blue px-2 py-0.5 rounded-full">週日・安平舒壓</span>
+                </div>
+                <div class="space-y-4 mt-2">
+                    <!-- 09:00 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">09:00</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">早餐：阿松割包</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=阿松割包" target="_blank" class="text-muji-accent"><i class="fa-solid fa-location-dot"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500">豬舌包 (國華街)</p>
+                        </div>
+                    </div>
+                    <!-- 10:30 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3 border-l-4 border-muji-brown">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">10:30</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">益生堂・凡吉力</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=益生堂凡吉力" target="_blank" class="text-muji-accent"><i class="fa-solid fa-gift"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">搭車至安平買蜜餞伴手禮。行李留民宿。</p>
+                        </div>
+                    </div>
+                    <!-- 11:30 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3 border-l-4 border-muji-red">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">11:30</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">午餐：屋裏的湯</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=屋裏的湯" target="_blank" class="text-muji-accent"><i class="fa-solid fa-utensils"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">安平質感湯屋，清新藥膳。</p>
+                        </div>
+                    </div>
+                    <!-- 13:00 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3 border-l-4 border-muji-purple">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">13:00</span><div class="h-full w-0.5 bg-gray-200 my-1"></div></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">舒壓：不老松足湯</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=不老松足湯安平" target="_blank" class="text-muji-accent"><i class="fa-solid fa-shoe-prints"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1"><strong>【舒壓亮點】</strong> 日式足湯與按摩，消除三天疲勞。</p>
+                        </div>
+                    </div>
+                    <!-- 15:30 -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex gap-3">
+                        <div class="flex flex-col items-center min-w-[50px]"><span class="text-sm font-mono font-bold text-muji-sub">15:30</span></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">前往高鐵站</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=高鐵台南站" target="_blank" class="text-muji-accent"><i class="fa-solid fa-location-dot"></i></a>
+                            </div>
+                            <p class="text-sm text-gray-500">先回民宿拿行李，再搭車。搭乘 16:28 的 546 車次</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: GUIDE -->
+        <div id="view-guide" class="view-section hidden fade-in pb-20">
+            <h2 class="text-2xl font-bold mb-4 text-muji-brown tracking-wide">深度導覽</h2>
+            
+            <article class="bg-white rounded-lg shadow-sm overflow-hidden mb-6">
+                <div class="h-40 bg-gray-300 relative">
+                    <img src="https://images.unsplash.com/photo-1596562095818-8f515e01b38f?q=80&w=800" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 bg-gradient-to-t from-black/60 to-transparent w-full p-4"><h3 class="text-white font-bold text-lg">司法博物館</h3></div>
+                </div>
+                <div class="p-5"><p class="text-sm leading-relaxed text-gray-600">日治時期台灣三大建築之一。最特別的是「貓道 (Catwalk)」，原為維修馬薩式屋頂的施工棧道。大廳圓頂雖華麗，但有歪斜現象，留意地面鏡面反射，是最佳拍照點。</p></div>
+            </article>
+
+            <article class="bg-white rounded-lg shadow-sm overflow-hidden mb-6">
+                <div class="h-40 bg-gray-800 relative">
+                    <img src="https://longqilightfestival.com/images/og.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1542665093-87b6400902bd?q=80&w=800'">
+                    <div class="absolute bottom-0 left-0 bg-gradient-to-t from-black/60 to-transparent w-full p-4"><h3 class="text-white font-bold text-lg">龍崎光節：空山祭</h3></div>
+                </div>
+                <div class="p-5"><p class="text-sm leading-relaxed text-gray-600">全台最美山林燈節。藝術家利用龍崎虎形山的自然地景，設置如夢似幻的光影作品。走在吊橋上彷彿進入電影場景。</p></div>
+            </article>
+
+            <article class="bg-white rounded-lg shadow-sm overflow-hidden mb-6">
+                <div class="h-40 bg-gray-300 relative">
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipPujQ3q7jJ7q7_7jQ3q7jJ7q7_7jQ3q7jJ7q7_7" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x400?text=博仁堂'">
+                    <div class="absolute bottom-0 left-0 bg-gradient-to-t from-black/60 to-transparent w-full p-4"><h3 class="text-white font-bold text-lg">博仁堂</h3></div>
+                </div>
+                <div class="p-5"><p class="text-sm leading-relaxed text-gray-600">前身為「博仁藥局」，傳承六代的百年中藥行。現在結合藥膳餐飲，保留了完整的藥櫃與匾額，是米其林必比登推薦的養生美味。</p></div>
+            </article>
+        </div>
+
+        <!-- SECTION: WALLET -->
+        <div id="view-wallet" class="view-section hidden fade-in pb-20">
+            <h2 class="text-2xl font-bold mb-4 text-muji-brown tracking-wide">旅費錢包 (離線版)</h2>
+            <div class="bg-muji-brown text-white rounded-lg p-5 shadow-lg mb-6">
+                <p class="text-sm opacity-80 mb-1">總支出 (TWD)</p>
+                <h3 class="text-3xl font-bold font-mono" id="total-expense">NT$ 0</h3>
+            </div>
+            <div class="bg-white rounded-lg p-5 shadow-sm mb-6">
+                <div class="grid grid-cols-3 gap-3 mb-3">
+                    <div class="col-span-2"><label class="text-xs text-gray-500 block mb-1">品項</label><input type="text" id="expense-name" placeholder="例：米糕" class="w-full text-sm"></div>
+                    <div><label class="text-xs text-gray-500 block mb-1">金額</label><input type="text" id="expense-amount" placeholder="可算式" class="w-full text-sm font-mono text-right"></div>
+                </div>
+                <button onclick="addExpense()" class="w-full bg-muji-text text-white py-3 rounded-lg font-bold shadow-md active:scale-95 transition">加入記帳</button>
+            </div>
+            <div id="expense-list" class="space-y-3"></div>
+            <button onclick="clearExpenses()" class="mt-8 text-xs text-red-400 underline w-full text-center">清除資料</button>
+        </div>
+
+        <!-- SECTION: LISTS -->
+        <div id="view-lists" class="view-section hidden fade-in pb-20">
+            <h2 class="text-2xl font-bold mb-4 text-muji-brown tracking-wide">準備清單</h2>
+            <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
+                <h3 class="font-bold mb-3 border-b pb-2">行前檢查</h3>
+                <div id="checklist-container" class="space-y-2">
+                    <!-- JS Generated -->
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm p-4">
+                <h3 class="font-bold mb-3 border-b pb-2">個人備忘錄</h3>
+                <textarea id="memo-area" class="w-full h-40 resize-none p-3 text-sm leading-relaxed" placeholder="輸入筆記..." oninput="saveMemo()"></textarea>
+            </div>
+        </div>
+
+        <!-- SECTION: INFO -->
+        <div id="view-info" class="view-section hidden fade-in pb-20">
+            <h2 class="text-2xl font-bold mb-4 text-muji-brown tracking-wide">實用資訊</h2>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <a href="https://www.cwa.gov.tw/V8/C/W/County/County.html?CID=67" target="_blank" class="bg-white p-4 rounded-lg shadow-sm text-center active:bg-gray-50 flex flex-col items-center">
+                    <i class="fa-solid fa-cloud-sun text-3xl text-muji-accent mb-2"></i>
+                    <p class="font-bold">台南天氣</p>
+                </a>
+                <a href="tel:110" class="bg-white p-4 rounded-lg shadow-sm text-center active:bg-gray-50 flex flex-col items-center">
+                    <i class="fa-solid fa-phone text-3xl text-muji-red mb-2"></i>
+                    <p class="font-bold">緊急報案</p>
+                </a>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm p-5 space-y-4">
+                <h3 class="font-bold border-b pb-2">注意事項</h3>
+                <ul class="list-disc list-inside text-sm text-gray-600 space-y-2">
+                    <li><strong>飲食：</strong> 台南口味偏甜，<span class="text-muji-red font-bold">不吃牛</span>請留意。</li>
+                    <li><strong>交通：</strong> 建議全程使用 Uber，長輩移動較舒適。</li>
+                    <li><strong>廁所：</strong> 司法博物館、西市場、林百貨有乾淨洗手間。</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Navigation -->
+    <nav class="fixed bottom-0 w-full bg-white border-t border-gray-200 z-50 pb-safe-bottom">
+        <div class="flex justify-around items-center h-16 max-w-md mx-auto">
+            <button onclick="switchTab('plan')" class="nav-btn tab-active flex flex-col items-center justify-center w-full h-full text-xs text-gray-400" data-target="plan"><i class="fa-regular fa-calendar-days text-xl mb-1"></i><span>行程</span></button>
+            <button onclick="switchTab('guide')" class="nav-btn flex flex-col items-center justify-center w-full h-full text-xs text-gray-400" data-target="guide"><i class="fa-solid fa-book-open text-xl mb-1"></i><span>導覽</span></button>
+            <button onclick="switchTab('wallet')" class="nav-btn flex flex-col items-center justify-center w-full h-full text-xs text-gray-400" data-target="wallet"><i class="fa-solid fa-wallet text-xl mb-1"></i><span>記帳</span></button>
+            <button onclick="switchTab('lists')" class="nav-btn flex flex-col items-center justify-center w-full h-full text-xs text-gray-400" data-target="lists"><i class="fa-solid fa-list-check text-xl mb-1"></i><span>清單</span></button>
+            <button onclick="switchTab('info')" class="nav-btn flex flex-col items-center justify-center w-full h-full text-xs text-gray-400" data-target="info"><i class="fa-solid fa-circle-info text-xl mb-1"></i><span>資訊</span></button>
+        </div>
+    </nav>
+
+    <script>
+        // Navigation
+        function switchTab(tabId) {
+            document.querySelectorAll('.view-section').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`view-${tabId}`).classList.remove('hidden');
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('tab-active', 'text-muji-brown');
+                btn.classList.add('text-gray-400');
+                if(btn.dataset.target === tabId) { btn.classList.add('tab-active', 'text-muji-brown'); btn.classList.remove('text-gray-400'); }
+            });
+            if(tabId === 'wallet') renderExpenses();
+        }
+
+        // Wallet
+        let expenses = JSON.parse(localStorage.getItem('tainan_expenses')) || [];
+        function addExpense() {
+            const name = document.getElementById('expense-name').value;
+            const amountStr = document.getElementById('expense-amount').value;
+            if(!name || !amountStr) return alert('請輸入內容');
+            let amount = 0;
+            try { amount = Function('"use strict";return (' + amountStr + ')')(); } catch { return alert('金額格式錯誤'); }
+            expenses.unshift({ id: Date.now(), name, amount, date: new Date().toLocaleDateString() });
+            localStorage.setItem('tainan_expenses', JSON.stringify(expenses));
+            renderExpenses();
+            document.getElementById('expense-name').value = '';
+            document.getElementById('expense-amount').value = '';
+        }
+        function renderExpenses() {
+            const list = document.getElementById('expense-list');
+            let total = 0;
+            list.innerHTML = expenses.map(e => {
+                total += e.amount;
+                return `<div class="bg-white p-3 rounded-lg shadow-sm flex justify-between items-center"><div><p class="font-bold">${e.name}</p><p class="text-xs text-gray-400">${e.date}</p></div><div class="flex items-center gap-3"><span class="font-mono font-bold text-muji-brown">NT$ ${e.amount}</span><button onclick="deleteExpense(${e.id})" class="text-gray-300"><i class="fa-solid fa-trash"></i></button></div></div>`;
+            }).join('');
+            document.getElementById('total-expense').innerText = `NT$ ${total}`;
+        }
+        function deleteExpense(id) {
+            if(confirm('刪除?')) { expenses = expenses.filter(e => e.id !== id); localStorage.setItem('tainan_expenses', JSON.stringify(expenses)); renderExpenses(); }
+        }
+        function clearExpenses() { if(confirm('清空?')) { expenses = []; localStorage.setItem('tainan_expenses', JSON.stringify(expenses)); renderExpenses(); } }
+
+        // Lists
+        const checkItems = ['身分證 / 健保卡', '手機充電器 / 行動電源', '個人常備藥品', '雨具 / 折疊傘', '好穿的走路鞋', '泳衣/泳褲 (汗蒸幕用)'];
+        function renderChecklist() {
+            const saved = JSON.parse(localStorage.getItem('tainan_checklist')) || {};
+            const container = document.getElementById('checklist-container');
+            container.innerHTML = checkItems.map(item => `
+                <label class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded cursor-pointer">
+                    <input type="checkbox" class="w-5 h-5 accent-muji-brown rounded" onchange="toggleCheck('${item}')" ${saved[item] ? 'checked' : ''}>
+                    <span>${item}</span>
+                </label>
+            `).join('');
+        }
+        function toggleCheck(item) {
+            const saved = JSON.parse(localStorage.getItem('tainan_checklist')) || {};
+            saved[item] = !saved[item];
+            localStorage.setItem('tainan_checklist', JSON.stringify(saved));
+        }
+        function saveMemo() { localStorage.setItem('tainan_memo', document.getElementById('memo-area').value); }
+
+        // Init
+        window.onload = function() {
+            switchTab('plan');
+            renderChecklist();
+            document.getElementById('memo-area').value = localStorage.getItem('tainan_memo') || '';
+        }
+    </script>
+</body>
+</html>
